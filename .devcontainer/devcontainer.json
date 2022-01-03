@@ -1,0 +1,18 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+{
+	"image": "jekyll/jekyll",
+	"name": "mypage",
+	"forwardPorts": [
+		4000,
+	],
+	"containerEnv": {
+		"JEKYLL_ENV": "docker"
+	},
+	"workspaceMount": "src=${localWorkspaceFolder},dst=/srv/jekyll,type=bind",
+	"workspaceFolder": "/srv/jekyll",
+	"postStartCommand": "jekyll serve --force_polling",
+	"runArgs": [
+		"--name=mypage",
+	],
+	"shutdownAction": "stopContainer",
+}
