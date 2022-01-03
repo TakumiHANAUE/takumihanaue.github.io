@@ -24,7 +24,8 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 , "docs/tests/"
 ]
 
-theme: "just-the-docs"
+# theme: "just-the-docs"
+remote_theme: pmarsceill/just-the-docs
 
 # Regression tests
 # By default, the pages in /docs/tests are excluded when the ste is built.
@@ -110,6 +111,7 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-remote-theme
 
 kramdown:
   syntax_highlighter_opts:
