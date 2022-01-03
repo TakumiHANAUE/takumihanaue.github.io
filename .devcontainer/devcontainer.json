@@ -1,7 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 {
-	"image": "jekyll/jekyll",
+	// "image": "jekyll/jekyll",
 	"name": "mypage",
+	"context": "..",
+	"dockerFile": "./Dockerfile",
 	"forwardPorts": [
 		4000,
 	],
