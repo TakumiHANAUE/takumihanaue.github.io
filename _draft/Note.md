@@ -1,4 +1,6 @@
+# 2 次元極座標での運動方程式
 
+# 3 次元極座標での運動方程式
 
 # [Julia language](https://julialang.org/)
 
@@ -62,4 +64,3 @@
 - Julia は enum 型を持っていて、マクロで `@enum(name, value1, value2, ...)` と表現される（例えば `@enum(Fruit, banana=1, apple, pear)`）。
 - 慣例として、引数を変更する関数の名前には最後に`!`を付ける。
 - Julia では全てのメソッドは "virtual" となる。
-
