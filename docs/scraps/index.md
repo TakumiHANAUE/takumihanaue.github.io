@@ -217,18 +217,19 @@ int mysprintf(char *s, const char *format, ...)
 - [コンテナからコンテナを操作する](https://blog.nijohando.jp/post/docker-in-docker-docker-outside-of-docker/)
 - [Docker コンテナ内から Docker を使うことについて](https://esakat.github.io/esakat-blog/posts/docker-in-docker/)
 
-![dind, dood イメージ](https://user-images.githubusercontent.com/19891114/56958913-b51ee000-6b86-11e9-91e0-7a0b6f6cb3b1.jpeg)
+![dind, dood イメージ](https://user-images.githubusercontent.com/19891114/56958913-b51ee000-6b86-11e9-91e0-7a0b6f6cb3b1.jpeg)  
+画像引用元：[Docker コンテナ内から Docker を使うことについて](https://esakat.github.io/esakat-blog/posts/docker-in-docker/)
 
 ## dind : Docker in Docker
 {: .no_toc }
 
-> Docker インストール済みのコンテナを使用しコンテナ内でホストとは別に Docker デーモンを動かす方法。
+_Docker インストール済みのコンテナを使用しコンテナ内でホストとは別に Docker デーモンを動かす方法。_
 
 ## dood : Docker out of docker
 {: .no_toc }
 
-> Docker インストール済みのコンテナを使用するのは DinD と同じだが dockerd、containerd は使用しない。
-> 代わりコンテナ側からホストの docker.sock (/var/run/docker.sock)をマウントすることでコンテナ上の Docker コマンドはホスト側の Docker 環境で実行される。
+_Docker インストール済みのコンテナを使用するのは DinD と同じだが dockerd、containerd は使用しない。
+代わりコンテナ側からホストの docker.sock (/var/run/docker.sock)をマウントすることでコンテナ上の Docker コマンドはホスト側の Docker 環境で実行される。_
 
 # GitLab Runner を試す
 
