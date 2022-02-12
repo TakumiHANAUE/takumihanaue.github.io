@@ -313,3 +313,42 @@ Pages の URL はプロジェクトの Settings > Pages に表示されている
 
 - [GitLab CI/CD での依存関係のキャッシュ](https://gitlab-docs.creationline.com/ee/ci/caching/)
 - [GitLab (CI/CD パイプライン編)](https://www.ospn.jp/osc2019-fall/pdf/OSC2019_TokyoFall_Yano.pdf)
+
+# ffmpegで静止画からgifを作る
+
+インプットとなるファイルを用意する。
+ファイル名は連番になるようにする。
+
+```
+input_00.png
+input_01.png
+input_02.png
+input_03.png
+```
+
+これらインプットからgifファイル(output.gif)を生成する。
+```
+$ ffmpeg -r 1 -i input_%02d.png -f gif output.gif
+```
+
+## カラーパレットを使ってより画質の良いgifを作る
+{: .no_toc }
+
+上記のコマンドだと画質が悪いので、カラーパレットを使ってより画質の良いgifを作る。
+
+- カラーパレットを生成する
+  ```
+  $ ffmpeg -i input_%02d.png -vf palettegen palette.png
+  ```
+- gifを生成する
+  ```
+  $ ffmpeg -r 1 -i input_%02d.png -i palette.png -filter_complex paletteuse -f gif output.gif
+  ```
+
+# git : tag/commit が乗っている branch を表示する
+
+```
+$ git branch --contains <tag or commit>
+```
+
+[Git: How to find out on which branch a tag is?](https://stackoverflow.com/questions/15806448/git-how-to-find-out-on-which-branch-a-tag-is)
