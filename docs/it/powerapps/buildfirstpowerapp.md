@@ -3,6 +3,7 @@ layout: default
 title: 初めてアプリを作ってみる
 nav_order: 1
 parent: Microsoft Power Apps
+grand_parent: IT
 ---
 
 # はじめに
@@ -73,8 +74,6 @@ Microsoft Learn の以下モジュール・ラーニングパスを行った。
 - 2022/1/1 だけ 仮データを入力
 
 を行った。
-
-**TODO : ウィンドウの**
 
 ![Excelのデータテーブルを用意する](../assets/maketable.gif)
 
