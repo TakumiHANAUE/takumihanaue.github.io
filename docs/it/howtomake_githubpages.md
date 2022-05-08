@@ -14,6 +14,9 @@ parent: IT
     - `_config.yml` の theme を remote_theme に変更 ( [修正差分例](https://github.com/TakumiHANAUE/takumihanaue.github.io/commit/7ade15e88ba04125f7aec7c54c36cb26b3ff4de2) )
 - Just the Docs テーマの Configuration を設定する  
     [こちらのページ](https://pmarsceill.github.io/just-the-docs/docs/configuration/) にしたがって、必要な設定をする。
+- Google Analytics のトラッキングを設定する  
+    Just the Docs テーマでは `_config.yml` で `ga_tracking` に `測定ID` を記載するだけで良い。
+    `ga_tracking_anonymize_ip` はデフォルト値 `true` にした。
 
 ### 参考ページ
 
@@ -22,3 +25,4 @@ parent: IT
 - [Quick start: Use as a GitHub Pages remote theme](https://pmarsceill.github.io/just-the-docs/#quick-start-use-as-a-github-pages-remote-theme)
 - [Adding a theme to your GitHub Pages site using Jekyll](https://docs.github.com/ja/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
 - [Just the Docs : Configuration](https://pmarsceill.github.io/just-the-docs/docs/configuration/)
+    - [Just the Docs : Configuration/Google Analytics](https://just-the-docs.github.io/just-the-docs/docs/configuration/#google-analytics)
