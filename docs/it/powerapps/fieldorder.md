@@ -1,7 +1,7 @@
 ---
 layout: default
 title: フィールドの順序
-nav_order: 1
+nav_order: 5
 parent: Microsoft Power Apps
 grand_parent: IT
 ---
