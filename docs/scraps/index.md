@@ -354,7 +354,7 @@ $ git branch --contains <tag or commit>
 [Git: How to find out on which branch a tag is?](https://stackoverflow.com/questions/15806448/git-how-to-find-out-on-which-branch-a-tag-is)
 
 # CGエンジニア検定 エキスパート・ベーシック公式問題集エキスパート 改定第三版
-## エキスパート練習問題 第6問
+## エキスパート練習問題１ 第６問
 
 
-![エキスパート練習問題 第6問]({% link docs/scraps/assets/cgeng_exp_1-6.gif %})
+![エキスパート練習問題１ 第６問]({% link docs/scraps/assets/cgeng_exp_1-6.gif %})
