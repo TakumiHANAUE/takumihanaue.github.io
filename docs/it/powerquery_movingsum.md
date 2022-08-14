@@ -43,7 +43,7 @@ parent: IT
 
 **数式詳細**
 
-- Table.TransformColumnTypes() : [仕様](https://docs.microsoft.com/ja-jp/powerquery-m/table-transformcolumntypes)
+- Table.TransformColumnTypes() : [定義](https://docs.microsoft.com/ja-jp/powerquery-m/table-transformcolumntypes)
 
     ```
     - 返り値
@@ -86,7 +86,7 @@ parent: IT
 
 **数式詳細**
 
-- Table.AddColumn() : [仕様](https://docs.microsoft.com/ja-jp/powerquery-m/table-addcolumn)
+- Table.AddColumn() : [定義](https://docs.microsoft.com/ja-jp/powerquery-m/table-addcolumn)
 
     ```
     - 返り値
@@ -140,7 +140,7 @@ parent: IT
 
 **数式詳細**
 
-- Table.AddColumn() : [仕様](https://docs.microsoft.com/ja-jp/powerquery-m/table-addcolumn)
+- Table.AddColumn() : [定義](https://docs.microsoft.com/ja-jp/powerquery-m/table-addcolumn)
 
     ```
     - 返り値
@@ -164,7 +164,7 @@ parent: IT
         （引数`g`には対象行のデータが渡される（という理解で良いはず））
     - 値は`number`型とする
 
-- List.Sum() : [仕様](https://docs.microsoft.com/ja-jp/powerquery-m/list-sum)
+- List.Sum() : [定義](https://docs.microsoft.com/ja-jp/powerquery-m/list-sum)
 
     ```
     - 返り値
@@ -181,7 +181,7 @@ parent: IT
 
     - SelectRows()で抽出した行の`時間外業務時間`要素の合計を算出する
 
-- Table.SelectRows() : [仕様](https://docs.microsoft.com/ja-jp/powerquery-m/table-selectrows)
+- Table.SelectRows() : [定義](https://docs.microsoft.com/ja-jp/powerquery-m/table-selectrows)
 
     ```
     - 返り値
@@ -200,7 +200,7 @@ parent: IT
         - 引数で渡した`日付`値（`g[日付]`）より小さい`日付`を持つ行
         - 引数で渡した`日付`値の 2 日前（`Date.AddDays(g[日付], -2)`）より大きい`日付`を持つ行
 
-- Date.AddDays() : [仕様](https://docs.microsoft.com/ja-jp/powerquery-m/date-adddays)
+- Date.AddDays() : [定義](https://docs.microsoft.com/ja-jp/powerquery-m/date-adddays)
 
     ```
     - 返り値
@@ -222,7 +222,7 @@ parent: IT
 - [Creating a Rolling Average & Rolling Total using Power Query.](https://www.mavaanalytics.com/post/creating-a-rolling-average-sum)
 - [【Power Query M 式言語】関数について解説](https://www.tekizai.net/entry/2021/09/23/063000)
 - [M 言語に慣れる\_8 回目～ EACH を使いこなして M 関数作成～](https://analytic-vba.com/power-query/m-code/begin-each/#4)
-- M 関数仕様
+- M 関数定義
     - [Table.TransformColumnTypes()](https://docs.microsoft.com/ja-jp/powerquery-m/table-transformcolumntypes)
     - [Table.AddColumn()](https://docs.microsoft.com/ja-jp/powerquery-m/table-addcolumn)
     - [List.Sum()](https://docs.microsoft.com/ja-jp/powerquery-m/list-sum)
