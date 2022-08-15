@@ -5,7 +5,8 @@ nav_order: 2
 parent: IT
 ---
 
-日ごとの勤務時間データから時間外業務時間の N 日間移動合計を算出する。
+日ごとの勤務時間データから時間外業務時間の N 日間移動合計 (Moving/Rolling/Running Sum/Total per N days) を算出する。  
+ここでは3日間移動合計を算出する。
 
 ## 元データ
 
@@ -27,7 +28,7 @@ parent: IT
 | 時間外業務時間   | `勤務時間-8.0` を時間外業務時間として追加する |
 | 移動合計         | 時間外業務時間の 3 日間移動合計を追加する     |
 
-### 型の変更
+### ステップ : 型の変更
 
 **数式**
 
@@ -60,7 +61,7 @@ parent: IT
     | typeTransformations | { {"日付", type date }, { "勤務時間", type number } } |
     | culture             | -                                                |
 
-### 時間外業務時間
+### ステップ : 時間外業務時間
 
 **数式**
 
@@ -105,7 +106,7 @@ parent: IT
     | columnGenerator | each [勤務時間] - 8.0 |
     | columnType      | type number           |
 
-### 移動合計
+### ステップ : 移動合計
 
 **数式**
 
@@ -161,7 +162,8 @@ parent: IT
 
     - `時間外業務時間`ステップで生成したテーブルに`移動合計`列を追加する
     - 列の生成式は `(g)=>List.Sum( 記載略 )`  
-        （引数`g`には対象行のデータが渡される（という理解で良いはず））
+      （引数`g`には対象行のデータが渡される（という理解で良いはず））。  
+      例えば、 2022/1/3 の 移動合計 を算出するときは、 `g` として `{日付, 勤務時間, 時間外業務時間} = {2022/1/3, 10, 2}` が渡される。
     - 値は`number`型とする
 
 - List.Sum() : [定義](https://docs.microsoft.com/ja-jp/powerquery-m/list-sum)
@@ -179,7 +181,7 @@ parent: IT
     | list      | Table.SelectRows( 記載略 )[時間外業務時間] |
     | precision | -                                          |
 
-    - SelectRows()で抽出した行の`時間外業務時間`要素の合計を算出する
+    - SelectRows()で抽出したテーブルの`時間外業務時間`要素の合計を算出する
 
 - Table.SelectRows() : [定義](https://docs.microsoft.com/ja-jp/powerquery-m/table-selectrows)
 
@@ -197,8 +199,10 @@ parent: IT
     | condition | each( [日付]<=g[日付] and [日付] >= Date.AddDays(g[日付], -2) ) |
 
     - 以下条件を満たす行を抽出する
-        - 引数で渡した`日付`値（`g[日付]`）より小さい`日付`を持つ行
-        - 引数で渡した`日付`値の 2 日前（`Date.AddDays(g[日付], -2)`）より大きい`日付`を持つ行
+        - 引数で渡した`g`の日付値（`g[日付]`）より小さい`日付`を持つ行  
+            例えば、2022/1/4 の行が引数`g`として渡されている場合は 2022/1/1 ～ 2022/1/4。
+        - 引数で渡した`g`の日付値の 2 日前（`Date.AddDays(g[日付], -2)`）より大きい`日付`を持つ行  
+            例えば、2022/1/4 の行が引数`g`として渡されている場合は 2022/1/2 ～ 2022/1/7。
 
 - Date.AddDays() : [定義](https://docs.microsoft.com/ja-jp/powerquery-m/date-adddays)
 
@@ -215,7 +219,7 @@ parent: IT
     | dateTime     | g[日付] |
     | numberOfDays | -2      |
 
-    - 引数で渡した`日付`値（`g[日付]`）の 2 日前の値を算出する
+    - 引数で渡した`g`の日付値（`g[日付]`）の 2 日前の値を算出する
 
 ## 参考
 
