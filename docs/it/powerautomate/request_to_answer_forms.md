@@ -54,7 +54,7 @@ grand_parent: IT
     - "Link Title" に「こちら」、"Link Target" にFormsへのURLを入力し、"Add"をクリックする。  
     　
     ![Formsへリンク]({% link docs/it/powerautomate/assets/request_to_answer_forms_07.png %})
-    - Formsへのリンクは、Formsの **回答の収集** からコピーしてくる。
+    Formsへのリンクは、Formsの **回答の収集** からコピーしてくる。
     　
     ![FormsのURL]({% link docs/it/powerautomate/assets/request_to_answer_forms_08.png %})
 
