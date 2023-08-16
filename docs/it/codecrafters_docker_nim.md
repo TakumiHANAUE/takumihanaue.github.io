@@ -14,8 +14,6 @@ parent: IT
 
 こちらのツイートを見て CodeCrafters を知った。
 
-**ツイートの引用**
-
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">教育オタクなのでプログラミング学習サービスは大体知ってるんだけど、最近で一番いいなと思った。<a href="https://t.co/ioFOAjoUIM">https://t.co/ioFOAjoUIM</a><br>- Redis, Git, Dockerの再実装など少し複雑なソフトウェアを自作する課題<br>- 名だたる企業のエンジニアが作ったカリキュラムでベストプラクティスも学べる<br>- C/Rust/Goも使える <a href="https://t.co/cIXem7KJkp">pic.twitter.com/cIXem7KJkp</a></p>&mdash; Yu Fukuyama (@yuskefukuyama) <a href="https://twitter.com/yuskefukuyama/status/1610591440404643845?ref_src=twsrc%5Etfw">January 4, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Build your own Docker コース
@@ -123,7 +121,7 @@ HTTPリクエスト何それ？状態 ＋ 英語のドキュメントだった�
 ## やってみた感想
 
 自分が普段使っている Docker を実際に作ってみるというのは楽しかった。  
-作ったのはプログラムは、イメージをpullしてコマンドを実行する というだけのものだが、それでも実際に動いたときは嬉しかった。
+作ったプログラムは、イメージをpullしてコマンドを実行する というだけのものだが、それでも実際に動いたときは嬉しかった。
 「Dockerってすごいな、作ってくれてありがとう！」という気持ちにもなった。
 
 関連技術・概念についても学ぶことができた点が良かった。  
