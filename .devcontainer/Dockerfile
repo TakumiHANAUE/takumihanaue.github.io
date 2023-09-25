@@ -1,3 +1,6 @@
-FROM jekyll/jekyll
+# FROM jekyll/jekyll
+FROM ruby:2.7.4-bullseye
 
-RUN apk add openssh ffmpeg
+RUN gem install bundler
+
+# RUN apk add openssh ffmpeg

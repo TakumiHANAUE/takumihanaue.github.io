@@ -12,6 +12,7 @@
 	},
 	"workspaceMount": "src=${localWorkspaceFolder},dst=/srv/jekyll,type=bind",
 	"workspaceFolder": "/srv/jekyll",
+	"postCreateCommand": "bundle update",
 	"postStartCommand": "jekyll serve --force_polling",
 	"runArgs": [
 		"--name=mypage",
