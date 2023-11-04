@@ -5,6 +5,15 @@ nav_order: 1
 parent: IT
 ---
 
+<details open markdown="block">
+  <summary>
+    目次
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
 **環境**
 
 - OS : Windows 10 (Ver.20H2)
@@ -193,3 +202,53 @@ MathJax の代わりに KaTeX を使用してみる。どうやら KaTeX の方�
 ```
 
 これにより、ブロック表示は`$$..$$`、インライン表示は`$..$`で数式を表示できるようになる。
+
+# トラブルシューティング
+
+## jekyll-include-cache の Dependency Error
+
+**エラーメッセージ**
+
+```
+  Dependency Error: Yikes! It looks like you don't have jekyll-include-cache or
+one of its dependencies installed. In order to use Jekyll as currently configure
+d, you'll need to install this gem. The full error message from Ruby is: 'cannot
+ load such file -- jekyll-include-cache' If you run into trouble, you can find h
+elpful resources at https://jekyllrb.com/help/! 
+jekyll 3.9.0 | Error:  jekyll-include-cache
+```
+
+**解決方法**
+
+- Gemfile, _config.yml に jekyll-include-cache を加える
+  - Gemfile
+    ```diff
+    group :jekyll_plugins do
+      gem "jekyll-feed", "~> 0.12"
+      gem "jekyll-remote-theme", "~> 0.4.3"
+    +  gem "jekyll-include-cache"
+    end
+    ```
+  - _config.yml
+    ```diff
+    plugins:
+      - jekyll-seo-tag
+      - jekyll-remote-theme
+    +  - jekyll-include-cache
+    ```
+
+## Gemfile.lock に書き込めない
+
+**エラーメッセージ**
+
+```
+There was an error while trying to write to `/srv/jekyll/Gemfile.lock`. It is
+likely that you need to grant write permissions for that path.
+```
+
+**解決方法**
+
+- Gemfile.lock に書き込み権限をつける
+```sh
+$ chmod 666 Gemfile.lock
+```
